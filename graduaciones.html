@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tours Expo Graduación</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #173c55;
+    background: #ffffff;
+}
+
+:root {
+    --azul: #0b3b58;
+    --azul-oscuro: #082b42;
+    --dorado: #b79a55;
+    --crema: #f7f4ed;
+    --gris: #667680;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* HEADER */
+
+header {
+    background: white;
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px #00000012;
+}
+
+.logo {
+    color: var(--azul);
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--dorado);
+}
+
+.logo small {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: normal;
+    margin-top: 7px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--azul);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--dorado);
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    background: var(--dorado);
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: 0.25s;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #967a3b;
+    transform: translateY(-2px);
+}
+
+.btn-azul {
+    background: var(--azul);
+}
+
+.btn-azul:hover {
+    background: var(--azul-oscuro);
+}
+
+/* PORTADA */
+
+.hero {
+    min-height: 570px;
+    background:
+        linear-gradient(90deg, rgba(5,37,57,.92), rgba(5,37,57,.25)),
+        url("https://centrodegraduaciones.com/wp-content/uploads/2020/10/web-Tour-expo-grad_Mesa-de-trabajo-1-scaled.jpg")
+        center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 70px 9%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.etiqueta {
+    color: #e0c785;
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 68px);
+    line-height: 1.08;
+    margin-bottom: 24px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 570px;
+}
+
+/* SECCIONES GENERALES */
+
+section {
+    padding: 85px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 45px;
+}
+
+.section-heading .eyebrow {
+    color: var(--dorado);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.section-heading h2 {
+    color: var(--azul);
+    font-size: clamp(30px, 4vw, 43px);
+    margin-bottom: 18px;
+}
+
+.section-heading p {
+    color: var(--gris);
+    line-height: 1.8;
+}
+
+/* PRESENTACIÓN */
+
+.presentacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.presentacion img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.presentacion h2 {
+    font-size: 38px;
+    color: var(--azul);
+    margin-bottom: 22px;
+}
+
+.presentacion p {
+    color: var(--gris);
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* PRÓXIMAS GRADUACIONES */
+
+.proximas {
+    background: var(--crema);
+}
+
+.graduacion-card {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    background: white;
+    box-shadow: 0 15px 40px #173c5515;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.graduacion-imagen {
+    min-height: 400px;
+    background: var(--azul);
+}
+
+.graduacion-imagen img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+}
+
+.graduacion-info {
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.graduacion-info .fecha {
+    color: var(--dorado);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 17px;
+}
+
+.graduacion-info h3 {
+    color: var(--azul);
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.graduacion-info p {
+    color: var(--gris);
+    line-height: 1.8;
+    margin-bottom: 17px;
+}
+
+.detalles {
+    margin: 5px 0 25px;
+    color: var(--azul);
+    line-height: 2;
+    font-size: 14px;
+}
+
+.detalles span {
+    color: var(--dorado);
+    font-weight: bold;
+}
+
+/* SERVICIOS */
+
+.servicios {
+    background: white;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.servicio {
+    border: 1px solid #e6e3dd;
+    background: white;
+    transition: 0.25s;
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px #00000010;
+}
+
+.servicio img {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+}
+
+.servicio-contenido {
+    padding: 25px;
+}
+
+.servicio h3 {
+    color: var(--azul);
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.servicio p {
+    color: var(--gris);
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* BANNER */
+
+.banner {
+    background: var(--azul);
+    color: white;
+    text-align: center;
+}
+
+.banner h2 {
+    font-size: clamp(30px, 4vw, 42px);
+    margin-bottom: 18px;
+}
+
+.banner p {
+    color: #e1e7eb;
+    max-width: 700px;
+    line-height: 1.8;
+    margin: 0 auto 28px;
+}
+
+/* CONTACTO */
+
+.contacto {
+    background: var(--crema);
+    text-align: center;
+}
+
+.contacto h2 {
+    color: var(--azul);
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.contacto p {
+    color: var(--gris);
+    line-height: 1.9;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--azul-oscuro);
+    color: white;
+    padding: 35px 8%;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.footer-logo span {
+    color: var(--dorado);
+}
+
+footer p {
+    color: #d5dfe5;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .presentacion,
+    .graduacion-card {
+        grid-template-columns: 1fr;
+    }
+
+    .graduacion-imagen,
+    .graduacion-imagen img {
+        min-height: 300px;
+        max-height: 420px;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        gap: 13px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 55px 7%;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+
+    .presentacion img {
+        height: 300px;
+    }
+
+    .graduacion-info {
+        padding: 28px;
+    }
+
+    .graduacion-info h3 {
+        font-size: 27px;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<script type="text/javascript" src="https://vivenu.com/web/deliver/js/v1/embed.js"></script>
+<body>
+
+<!-- ENCABEZADO -->
+
+<header>
+    <a href="#inicio" class="logo">
+        TOURS <span>EXPO</span>
+        <small>GRADUACIÓN</small>
+    </a>
+
+    <nav>
+        <a href="#inicio">INICIO</a>
+        <a href="#nosotros">NOSOTROS</a>
+        <a href="#graduaciones">PRÓXIMAS GRADUACIONES</a>
+        <a href="#servicios">SERVICIOS</a>
+        <a href="#contacto">CONTACTO</a>
+    </nav>
+</header>
+
+<!-- PORTADA -->
+
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <div class="etiqueta">EL COMIENZO DE UNA NUEVA ETAPA</div>
+
+        <h1>Tu esfuerzo merece un recuerdo inolvidable.</h1>
+
+        <p>
+            En Tours Expo Graduación creamos recuerdos que celebran
+            años de esfuerzo, dedicación y logros académicos.
+            Celebra este gran momento con nosotros.
+        </p>
+
+        <a href="#graduaciones" class="btn">
+            VER PRÓXIMAS GRADUACIONES
+        </a>
+    </div>
+</section>
+
+<!-- NOSOTROS -->
+
+<section id="nosotros">
+    <div class="presentacion">
+        <div>
+            <div class="etiqueta">TOURS EXPO GRADUACIÓN</div>
+
+            <h2>Un recuerdo para toda la vida</h2>
+
+            <p>
+                Acompañamos a los nuevos profesionistas en una de las
+                etapas más importantes de su vida. Ofrecemos productos
+                y servicios para conservar el recuerdo de sus logros.
+            </p>
+
+            <p>
+                Trabajamos con instituciones educativas y graduados
+                para ofrecer alternativas de fotografía, diplomas,
+                reconocimientos y paquetes individuales o grupales.
+            </p>
+
+            <a href="#servicios" class="btn btn-azul">
+                CONOCE NUESTROS SERVICIOS
+            </a>
+        </div>
+
+        <img
+            src="https://centrodegraduaciones.com/wp-content/uploads/2020/10/web-Tour-expo-grad_Mesa-de-trabajo-1-copia-scaled.jpg"
+            alt="Reconocimiento de graduación de Tours Expo">
+    </div>
+</section>
+
+<!-- PRÓXIMAS GRADUACIONES -->
+
+<section class="proximas" id="graduaciones">
+    <div class="section-heading">
+        <div class="eyebrow">Celebra tu logro</div>
+
+        <h2>Próximas graduaciones</h2>
+
+        <p>
+            Encuentra aquí la información de tu generación y accede
+            al enlace de compra para consultar tus opciones.
+        </p>
+    </div>
+
+    <!--
+      PARA PUBLICAR UNA GRADUACIÓN:
+      1. Cambia el nombre de la institución.
+      2. Actualiza fecha y descripción.
+      3. Reemplaza el enlace de ejemplo por tu link de Vivenu.
+      4. Puedes cambiar la imagen por otra foto oficial.
+    -->
+
+    <div class="graduacion-card">
+        <div class="graduacion-imagen">
+            <img
+                src="https://centrodegraduaciones.com/wp-content/uploads/2020/10/web-Tour-expo-grad_Mesa-de-trabajo-1-copia-5-5-scaled.jpg"
+                alt="Fotografía panorámica de una graduación">
+        </div>
+
+        <div class="graduacion-info">
+            <div class="fecha">Próximo evento · Generación 2026</div>
+
+            <h3>Tu graduación comienza aquí</h3>
+
+            <p>
+                Consulta la información de tu generación y encuentra
+                los detalles para adquirir tus accesos o productos
+                relacionados con tu evento de graduación.
+            </p>
+
+            <div class="detalles">
+                <div><span>Institución:</span> Nombre de tu universidad</div>
+                <div><span>Fecha:</span> Próximamente</div>
+                <div><span>Acceso:</span> Consulta la información en Vivenu</div>
+            </div>
+
+            <!-- REEMPLAZA ESTA URL CON TU ENLACE REAL DE VIVENU -->
+            <a
+                class="btn vivenu-btn yourStylingClass"
+                href="https://ticket.payuticket.com/event/graduacion-2-ox3qh3?useEmbed=true"
+                target="_blank"
+                rel="noopener noreferrer">
+                COMPRAR BOLETOS
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICIOS -->
+
+<section class="servicios" id="servicios">
+    <div class="section-heading">
+        <div class="eyebrow">Nuestros servicios</div>
+
+        <h2>Todo para tu graduación</h2>
+
+        <p>
+            Productos y servicios para conservar los recuerdos
+            de una etapa que merece celebrarse.
+        </p>
+    </div>
+
+    <div class="servicios-grid">
+
+        <article class="servicio">
+            <img
+                src="https://centrodegraduaciones.com/wp-content/uploads/2020/10/web-Tour-expo-grad_Mesa-de-trabajo-1-copia-2-scaled.jpg"
+                alt="Diploma de graduación">
+
+            <div class="servicio-contenido">
+                <h3>Diplomas y reconocimientos</h3>
+
+                <p>
+                    Opciones de diplomas y reconocimientos
+                    personalizados para recordar tu logro académico.
+                </p>
+            </div>
+        </article>
+
+        <article class="servicio">
+            <img
+                src="https://centrodegraduaciones.com/wp-content/uploads/2020/10/web-Tour-expo-grad_Mesa-de-trabajo-1-copia-4-2-scaled.jpg"
+                alt="Fotografía panorámica de graduación">
+
+            <div class="servicio-contenido">
+                <h3>Fotografía panorámica</h3>
+
+                <p>
+                    Conserva un recuerdo de tu generación con
+                    fotografías y presentaciones para toda la vida.
+                </p>
+            </div>
+        </article>
+
+        <article class="servicio">
+            <img
+                src="https://centrodegraduaciones.com/wp-content/uploads/2020/10/web-Tour-expo-grad_Mesa-de-trabajo-1-copia-6-scaled.jpg"
+                alt="Pedestal conmemorativo">
+
+            <div class="servicio-contenido">
+                <h3>Paquetes individuales</h3>
+
+                <p>
+                    Conoce alternativas de productos conmemorativos
+                    para celebrar tu graduación de manera especial.
+                </p>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- LLAMADA A LA ACCIÓN -->
+
+<section class="banner">
+    <h2>Tu graduación merece celebrarse</h2>
+
+    <p>
+        Revisa las próximas graduaciones y encuentra la información
+        de tu generación en un solo lugar.
+    </p>
+
+    <a href="#graduaciones" class="btn">
+        CONSULTAR GRADUACIONES
+    </a>
+</section>
+
+<!-- CONTACTO -->
+
+<section class="contacto" id="contacto">
+    <h2>Estamos para ayudarte</h2>
+
+    <p>
+        <strong>Tours Expo Graduación</strong>
+    </p>
+
+    <p>
+        8 Sur No. 2506, Col. Ladrillera de Benítez, Puebla, México.
+    </p>
+
+    <p>
+        Lunes a viernes: 9:00 a 15:00 h · Sábado: 9:00 a 14:00 h
+    </p>
+
+    <p>
+        centrodegraduaciones@gmail.com
+    </p>
+
+    <br>
+
+    <a
+        class="btn btn-azul"
+        href="https://centrodegraduaciones.com/toursexpo/"
+        target="_blank"
+        rel="noopener noreferrer">
+        VISITAR PÁGINA OFICIAL
+    </a>
+</section>
+
+<!-- PIE DE PÁGINA -->
+
+<footer>
+    <div class="footer-logo">TOURS <span>EXPO</span></div>
+
+    <p>Graduación · Recuerdos · Nuevas etapas</p>
+
+    <p>Demo de sitio web para presentación de un sistema de boletaje.</p>
+</footer>
+
+</body>
+</html>
