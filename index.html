@@ -4,9 +4,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tours Expo Graduación</title>
+<title>Hotel Provincia Juriquilla | Experiencias y Eventos</title>
 
 <style>
+:root {
+    --vino: #75452f;
+    --dorado: #b99a64;
+    --crema: #f6f3ed;
+    --oscuro: #292620;
+    --gris: #77736d;
+    --blanco: #ffffff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -18,706 +27,736 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #173c55;
-    background: #ffffff;
-}
-
-:root {
-    --azul: #0b3b58;
-    --azul-oscuro: #082b42;
-    --dorado: #b79a55;
-    --crema: #f7f4ed;
-    --gris: #667680;
+    font-family: "Georgia", "Times New Roman", serif;
+    color: var(--oscuro);
+    background: var(--blanco);
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
-/* HEADER */
+/* NAV */
 
 header {
-    background: white;
-    padding: 15px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 25px;
     position: sticky;
     top: 0;
-    z-index: 100;
-    box-shadow: 0 3px 15px #00000012;
+    z-index: 99;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 7%;
+    box-shadow: 0 2px 12px rgba(0,0,0,.07);
 }
 
 .logo {
-    color: var(--azul);
-    font-size: 30px;
-    font-weight: 900;
-    line-height: 0.9;
-    letter-spacing: -1px;
-}
-
-.logo span {
-    color: var(--dorado);
+    font-size: 23px;
+    letter-spacing: 2px;
+    color: var(--vino);
+    font-weight: bold;
 }
 
 .logo small {
     display: block;
-    font-size: 11px;
-    letter-spacing: 3px;
-    font-weight: normal;
-    margin-top: 7px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 5px;
+    color: var(--dorado);
+    margin-top: 4px;
 }
 
 nav {
     display: flex;
     align-items: center;
-    gap: 25px;
-    flex-wrap: wrap;
+    gap: 28px;
 }
 
 nav a {
-    color: var(--azul);
-    font-size: 13px;
-    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #51463d;
 }
 
 nav a:hover {
     color: var(--dorado);
 }
 
-.btn {
-    display: inline-block;
-    padding: 14px 25px;
-    background: var(--dorado);
+.nav-btn {
+    background: var(--vino);
     color: white;
-    font-size: 13px;
-    font-weight: bold;
-    border-radius: 3px;
-    transition: 0.25s;
-    text-align: center;
+    padding: 12px 19px;
 }
 
-.btn:hover {
-    background: #967a3b;
-    transform: translateY(-2px);
-}
-
-.btn-azul {
-    background: var(--azul);
-}
-
-.btn-azul:hover {
-    background: var(--azul-oscuro);
-}
-
-/* PORTADA */
+/* HERO */
 
 .hero {
-    min-height: 570px;
+    height: 660px;
     background:
-        linear-gradient(90deg, rgba(5,37,57,.92), rgba(5,37,57,.25)),
-        url("https://centrodegraduaciones.com/wp-content/uploads/2020/10/web-Tour-expo-grad_Mesa-de-trabajo-1-scaled.jpg")
-        center/cover no-repeat;
+      linear-gradient(rgba(25,20,15,.38), rgba(25,20,15,.50)),
+      url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=90")
+      center/cover;
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 70px 9%;
+    text-align: center;
     color: white;
+    padding: 30px;
 }
 
 .hero-content {
-    max-width: 650px;
+    max-width: 850px;
 }
 
-.etiqueta {
-    color: #e0c785;
+.hero .subtitle {
+    letter-spacing: 5px;
+    font-family: Arial, sans-serif;
     font-size: 13px;
-    letter-spacing: 4px;
-    font-weight: bold;
-    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #f2dfbd;
+    margin-bottom: 24px;
 }
 
 .hero h1 {
-    font-size: clamp(38px, 5vw, 68px);
-    line-height: 1.08;
+    font-size: 65px;
+    font-weight: normal;
+    line-height: 1.15;
     margin-bottom: 24px;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.8;
-    margin-bottom: 30px;
-    max-width: 570px;
+    margin-bottom: 32px;
 }
 
-/* SECCIONES GENERALES */
+.btn {
+    display: inline-block;
+    background: var(--vino);
+    color: white;
+    padding: 15px 29px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.4px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: var(--dorado);
+    color: white;
+}
+
+.btn-outline {
+    border: 1px solid white;
+    background: transparent;
+}
+
+/* GENERAL */
 
 section {
-    padding: 85px 8%;
+    padding: 90px 8%;
 }
 
 .section-heading {
     text-align: center;
-    max-width: 760px;
-    margin: 0 auto 45px;
+    margin-bottom: 48px;
 }
 
 .section-heading .eyebrow {
     color: var(--dorado);
     text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
     letter-spacing: 3px;
-    margin-bottom: 14px;
 }
 
 .section-heading h2 {
-    color: var(--azul);
-    font-size: clamp(30px, 4vw, 43px);
-    margin-bottom: 18px;
+    color: var(--vino);
+    font-size: 40px;
+    font-weight: normal;
+    margin: 16px 0;
 }
 
 .section-heading p {
     color: var(--gris);
+    font-size: 16px;
     line-height: 1.8;
 }
 
-/* PRESENTACIÓN */
+/* HOTEL */
 
-.presentacion {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 55px;
-    align-items: center;
-}
-
-.presentacion img {
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.presentacion h2 {
-    font-size: 38px;
-    color: var(--azul);
-    margin-bottom: 22px;
-}
-
-.presentacion p {
-    color: var(--gris);
-    line-height: 1.9;
-    margin-bottom: 18px;
-}
-
-/* PRÓXIMAS GRADUACIONES */
-
-.proximas {
+.about {
     background: var(--crema);
 }
 
-.graduacion-card {
-    max-width: 1100px;
-    margin: auto;
+.about-content {
     display: grid;
-    grid-template-columns: 1.05fr 1fr;
-    background: white;
-    box-shadow: 0 15px 40px #173c5515;
-    border-radius: 5px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-img {
+    height: 470px;
     overflow: hidden;
 }
 
-.graduacion-imagen {
-    min-height: 400px;
-    background: var(--azul);
-}
-
-.graduacion-imagen img {
+.about-img img {
     width: 100%;
     height: 100%;
-    min-height: 400px;
     object-fit: cover;
 }
 
-.graduacion-info {
-    padding: 45px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.graduacion-info .fecha {
+.about-text .eyebrow {
     color: var(--dorado);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bold;
+    font-family: Arial, sans-serif;
     font-size: 12px;
-    margin-bottom: 17px;
+    letter-spacing: 3px;
 }
 
-.graduacion-info h3 {
-    color: var(--azul);
-    font-size: 32px;
-    line-height: 1.2;
+.about-text h2 {
+    color: var(--vino);
+    font-size: 40px;
+    font-weight: normal;
+    margin: 20px 0;
+    line-height: 1.25;
+}
+
+.about-text p {
+    color: #68615a;
+    line-height: 1.9;
+    font-size: 16px;
     margin-bottom: 20px;
-}
-
-.graduacion-info p {
-    color: var(--gris);
-    line-height: 1.8;
-    margin-bottom: 17px;
-}
-
-.detalles {
-    margin: 5px 0 25px;
-    color: var(--azul);
-    line-height: 2;
-    font-size: 14px;
-}
-
-.detalles span {
-    color: var(--dorado);
-    font-weight: bold;
 }
 
 /* SERVICIOS */
 
-.servicios {
-    background: white;
-}
-
-.servicios-grid {
+.services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-.servicio {
-    border: 1px solid #e6e3dd;
-    background: white;
-    transition: 0.25s;
+.service {
+    text-align: center;
 }
 
-.servicio:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px #00000010;
-}
-
-.servicio img {
+.service img {
     width: 100%;
-    height: 235px;
+    height: 250px;
     object-fit: cover;
 }
 
-.servicio-contenido {
-    padding: 25px;
+.service h3 {
+    color: var(--vino);
+    font-size: 24px;
+    font-weight: normal;
+    margin: 22px 0 12px;
 }
 
-.servicio h3 {
-    color: var(--azul);
-    font-size: 22px;
-    margin-bottom: 12px;
-}
-
-.servicio p {
+.service p {
     color: var(--gris);
-    line-height: 1.7;
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* EVENTOS */
+
+.events {
+    background: var(--crema);
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.event-card {
+    background: white;
+    box-shadow: 0 5px 25px rgba(0,0,0,.06);
+    transition: .3s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.event-img img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+    transition: .4s;
+}
+
+.event-card:hover img {
+    transform: scale(1.03);
+}
+
+.event-body {
+    padding: 32px;
+}
+
+.event-tag {
+    font-family: Arial, sans-serif;
+    color: var(--dorado);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.event-body h3 {
+    color: var(--vino);
+    font-size: 31px;
+    font-weight: normal;
+    margin: 16px 0;
+}
+
+.event-body p {
+    font-size: 15px;
+    color: var(--gris);
+    line-height: 1.9;
+    margin-bottom: 24px;
+}
+
+.event-details {
+    border-top: 1px solid #e8e1d8;
+    border-bottom: 1px solid #e8e1d8;
+    padding: 15px 0;
+    margin-bottom: 25px;
+    color: #554c43;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.event-body .btn {
+    text-align: center;
+    width: 100%;
 }
 
 /* BANNER */
 
 .banner {
-    background: var(--azul);
+    background:
+      linear-gradient(rgba(57,39,26,.78), rgba(57,39,26,.78)),
+      url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1800&q=85")
+      center/cover;
     color: white;
     text-align: center;
+    padding: 100px 20px;
 }
 
 .banner h2 {
-    font-size: clamp(30px, 4vw, 42px);
-    margin-bottom: 18px;
+    font-size: 43px;
+    font-weight: normal;
+    margin-bottom: 22px;
 }
 
 .banner p {
-    color: #e1e7eb;
-    max-width: 700px;
-    line-height: 1.8;
-    margin: 0 auto 28px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+.banner .btn {
+    background: transparent;
+    border: 1px solid white;
+}
+
+.banner .btn:hover {
+    background: white;
+    color: var(--vino);
 }
 
 /* CONTACTO */
 
-.contacto {
-    background: var(--crema);
+.contact {
     text-align: center;
+    background: white;
 }
 
-.contacto h2 {
-    color: var(--azul);
-    font-size: 35px;
-    margin-bottom: 20px;
+.contact h2 {
+    font-size: 37px;
+    font-weight: normal;
+    color: var(--vino);
+    margin-bottom: 25px;
 }
 
-.contacto p {
+.contact p {
     color: var(--gris);
-    line-height: 1.9;
-    margin-bottom: 10px;
+    line-height: 2;
+    font-size: 15px;
 }
 
 /* FOOTER */
 
 footer {
-    background: var(--azul-oscuro);
+    background: #332a23;
     color: white;
-    padding: 35px 8%;
+    padding: 35px 7%;
     text-align: center;
 }
 
 .footer-logo {
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 23px;
     letter-spacing: 2px;
+    color: #e0c18b;
     margin-bottom: 12px;
 }
 
-.footer-logo span {
-    color: var(--dorado);
-}
-
 footer p {
-    color: #d5dfe5;
-    font-size: 13px;
-    line-height: 1.8;
+    font-family: Arial, sans-serif;
+    color: #ddd2c5;
+    font-size: 12px;
+    line-height: 2;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 
-@media (max-width: 900px) {
+@media(max-width: 850px) {
+
     header {
         flex-direction: column;
+        gap: 17px;
     }
 
     nav {
         justify-content: center;
+        flex-wrap: wrap;
         gap: 16px;
     }
 
-    .presentacion,
-    .graduacion-card {
-        grid-template-columns: 1fr;
-    }
-
-    .graduacion-imagen,
-    .graduacion-imagen img {
-        min-height: 300px;
-        max-height: 420px;
-    }
-
-    .servicios-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-    header {
-        padding: 18px 5%;
-    }
-
-    nav {
-        gap: 13px;
-    }
-
-    nav a {
-        font-size: 11px;
-    }
-
     .hero {
-        min-height: 500px;
-        padding: 55px 7%;
+        height: 530px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
     }
 
     .hero p {
         font-size: 16px;
     }
 
-    section {
-        padding: 60px 6%;
-    }
-
-    .presentacion img {
-        height: 300px;
-    }
-
-    .graduacion-info {
-        padding: 28px;
-    }
-
-    .graduacion-info h3 {
-        font-size: 27px;
-    }
-
-    .servicios-grid {
+    .about-content {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-img {
+        height: 350px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-img img {
+        height: 280px;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+
+    .section-heading h2,
+    .about-text h2 {
+        font-size: 32px;
+    }
+
+    .banner h2 {
+        font-size: 33px;
     }
 }
 </style>
-</head>
 <script type="text/javascript" src="https://vivenu.com/web/deliver/js/v1/embed.js"></script>
+</head>
+
 <body>
 
-<!-- ENCABEZADO -->
-
+<!-- HEADER -->
 <header>
-    <a href="#inicio" class="logo">
-        TOURS <span>EXPO</span>
-        <small>GRADUACIÓN</small>
+    <a href="#inicio">
+        <div class="logo">
+            HOTEL PROVINCIA
+            <small>JURIQUILLA</small>
+        </div>
     </a>
 
     <nav>
         <a href="#inicio">INICIO</a>
-        <a href="#nosotros">NOSOTROS</a>
-        <a href="#graduaciones">PRÓXIMAS GRADUACIONES</a>
+        <a href="#hotel">EL HOTEL</a>
         <a href="#servicios">SERVICIOS</a>
-        <a href="#contacto">CONTACTO</a>
+        <a href="#eventos">EVENTOS</a>
+        <a href="#contacto" class="nav-btn">CONTACTO</a>
     </nav>
 </header>
 
 <!-- PORTADA -->
-
 <section class="hero" id="inicio">
     <div class="hero-content">
-        <div class="etiqueta">EL COMIENZO DE UNA NUEVA ETAPA</div>
+        <div class="subtitle">Hospitalidad · Historia · Experiencias</div>
 
-        <h1>Tu esfuerzo merece un recuerdo inolvidable.</h1>
+        <h1>Un lugar donde cada momento se vuelve especial</h1>
 
         <p>
-            En Tours Expo Graduación creamos recuerdos que celebran
-            años de esfuerzo, dedicación y logros académicos.
-            Celebra este gran momento con nosotros.
+            Descubre el encanto de una hacienda histórica,
+            disfruta de espacios extraordinarios y vive
+            experiencias inolvidables en Provincia Juriquilla.
         </p>
 
-        <a href="#graduaciones" class="btn">
-            VER PRÓXIMAS GRADUACIONES
+        <a href="#eventos" class="btn btn-outline">
+            DESCUBRE NUESTROS EVENTOS
         </a>
     </div>
 </section>
 
-<!-- NOSOTROS -->
+<!-- HOTEL -->
+<section class="about" id="hotel">
+    <div class="about-content">
 
-<section id="nosotros">
-    <div class="presentacion">
-        <div>
-            <div class="etiqueta">TOURS EXPO GRADUACIÓN</div>
-
-            <h2>Un recuerdo para toda la vida</h2>
-
-            <p>
-                Acompañamos a los nuevos profesionistas en una de las
-                etapas más importantes de su vida. Ofrecemos productos
-                y servicios para conservar el recuerdo de sus logros.
-            </p>
-
-            <p>
-                Trabajamos con instituciones educativas y graduados
-                para ofrecer alternativas de fotografía, diplomas,
-                reconocimientos y paquetes individuales o grupales.
-            </p>
-
-            <a href="#servicios" class="btn btn-azul">
-                CONOCE NUESTROS SERVICIOS
-            </a>
-        </div>
-
-        <img
-            src="https://centrodegraduaciones.com/wp-content/uploads/2020/10/web-Tour-expo-grad_Mesa-de-trabajo-1-copia-scaled.jpg"
-            alt="Reconocimiento de graduación de Tours Expo">
-    </div>
-</section>
-
-<!-- PRÓXIMAS GRADUACIONES -->
-
-<section class="proximas" id="graduaciones">
-    <div class="section-heading">
-        <div class="eyebrow">Celebra tu logro</div>
-
-        <h2>Próximas graduaciones</h2>
-
-        <p>
-            Encuentra aquí la información de tu generación y accede
-            al enlace de compra para consultar tus opciones.
-        </p>
-    </div>
-
-    <!--
-      PARA PUBLICAR UNA GRADUACIÓN:
-      1. Cambia el nombre de la institución.
-      2. Actualiza fecha y descripción.
-      3. Reemplaza el enlace de ejemplo por tu link de Vivenu.
-      4. Puedes cambiar la imagen por otra foto oficial.
-    -->
-
-    <div class="graduacion-card">
-        <div class="graduacion-imagen">
+        <div class="about-img">
             <img
-                src="https://centrodegraduaciones.com/wp-content/uploads/2020/10/web-Tour-expo-grad_Mesa-de-trabajo-1-copia-5-5-scaled.jpg"
-                alt="Fotografía panorámica de una graduación">
+            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
+            alt="Hotel de arquitectura tradicional">
         </div>
 
-        <div class="graduacion-info">
-            <div class="fecha">Próximo evento · Generación 2026</div>
+        <div class="about-text">
+            <div class="eyebrow">Nuestra historia</div>
 
-            <h3>Tu graduación comienza aquí</h3>
+            <h2>El encanto de una hacienda, la comodidad de una gran experiencia</h2>
 
             <p>
-                Consulta la información de tu generación y encuentra
-                los detalles para adquirir tus accesos o productos
-                relacionados con tu evento de graduación.
+                En Hotel Provincia Juriquilla, la arquitectura histórica
+                y la hospitalidad se unen para ofrecer un ambiente
+                único. Un espacio donde la tranquilidad, la elegancia
+                y la atención se convierten en parte de cada visita.
             </p>
 
-            <div class="detalles">
-                <div><span>Institución:</span> Nombre de tu universidad</div>
-                <div><span>Fecha:</span> Próximamente</div>
-                <div><span>Acceso:</span> Consulta la información en Vivenu</div>
-            </div>
+            <p>
+                Ideal para disfrutar de una estancia, una reunión,
+                una celebración o un evento que merece un escenario especial.
+            </p>
 
-            <!-- REEMPLAZA ESTA URL CON TU ENLACE REAL DE VIVENU -->
-            <a
-                class="btn vivenu-btn yourStylingClass"
-                href="https://ticket.payuticket.com/event/graduacion-2-ox3qh3?useEmbed=true"
-                target="_blank"
-                rel="noopener noreferrer">
-                COMPRAR BOLETOS
-            </a>
+            <a href="#servicios" class="btn">CONOCE NUESTROS SERVICIOS</a>
         </div>
+
     </div>
 </section>
 
 <!-- SERVICIOS -->
+<section id="servicios">
 
-<section class="servicios" id="servicios">
     <div class="section-heading">
-        <div class="eyebrow">Nuestros servicios</div>
-
-        <h2>Todo para tu graduación</h2>
-
+        <div class="eyebrow">Disfruta cada espacio</div>
+        <h2>Una experiencia completa</h2>
         <p>
-            Productos y servicios para conservar los recuerdos
-            de una etapa que merece celebrarse.
+            Descubre nuestros espacios y disfruta de todo
+            lo que tenemos preparado para ti.
         </p>
     </div>
 
-    <div class="servicios-grid">
+    <div class="services-grid">
 
-        <article class="servicio">
+        <div class="service">
             <img
-                src="https://centrodegraduaciones.com/wp-content/uploads/2020/10/web-Tour-expo-grad_Mesa-de-trabajo-1-copia-2-scaled.jpg"
-                alt="Diploma de graduación">
+            src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=85"
+            alt="Habitación de hotel">
+            <h3>Habitaciones</h3>
+            <p>
+                Descansa en espacios diseñados para brindarte
+                comodidad, tranquilidad y una estancia placentera.
+            </p>
+        </div>
 
-            <div class="servicio-contenido">
-                <h3>Diplomas y reconocimientos</h3>
+        <div class="service">
+            <img
+            src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=900&q=85"
+            alt="Alberca del hotel">
+            <h3>Alberca y jardines</h3>
+            <p>
+                Relájate en nuestras áreas exteriores,
+                disfruta del sol y conecta con un ambiente de descanso.
+            </p>
+        </div>
+
+        <div class="service">
+            <img
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=85"
+            alt="Restaurante elegante">
+            <h3>Gastronomía</h3>
+            <p>
+                Disfruta de momentos únicos y sabores especiales
+                en nuestros espacios gastronómicos.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- EVENTOS -->
+<section class="events" id="eventos">
+
+    <div class="section-heading">
+        <div class="eyebrow">Experiencias Provincia</div>
+        <h2>Próximos eventos</h2>
+        <p>
+            Disfruta de experiencias únicas en un escenario extraordinario.
+            Reserva tus entradas y sé parte de nuestros próximos eventos.
+        </p>
+    </div>
+
+    <div class="events-grid">
+
+        <!-- EVENTO 1 -->
+        <article class="event-card">
+
+            <div class="event-img">
+                <img
+                src="vino.jpg"
+                alt="Concierto y música en vivo">
+            </div>
+
+            <div class="event-body">
+
+                <span class="event-tag">Evento especial</span>
+
+                <h3>Noche de Jazz &amp; Vino</h3>
 
                 <p>
-                    Opciones de diplomas y reconocimientos
-                    personalizados para recordar tu logro académico.
+                    Una velada para disfrutar de música en vivo,
+                    un ambiente sofisticado y una experiencia
+                    inolvidable entre amigos y buena compañía.
                 </p>
+
+                <div class="event-details">
+                    📅 Fecha: Próximamente<br>
+                    📍 Hotel Provincia Juriquilla<br>
+                    ✨ Música, ambiente y experiencias
+                </div>
+
+                <a
+                href="https://ticket.payuticket.com/event/noche-de-jazz-vino-pz8jq7?useEmbed=true"
+                target="_blank"
+                class="btn vivenu-btn yourStylingClass">
+                    COMPRAR ENTRADAS
+                </a>
+
             </div>
         </article>
 
-        <article class="servicio">
-            <img
-                src="https://centrodegraduaciones.com/wp-content/uploads/2020/10/web-Tour-expo-grad_Mesa-de-trabajo-1-copia-4-2-scaled.jpg"
-                alt="Fotografía panorámica de graduación">
+        <!-- EVENTO 2 -->
+        <article class="event-card">
 
-            <div class="servicio-contenido">
-                <h3>Fotografía panorámica</h3>
-
-                <p>
-                    Conserva un recuerdo de tu generación con
-                    fotografías y presentaciones para toda la vida.
-                </p>
+            <div class="event-img">
+                <img
+                src="gala.jpeg"
+                alt="Cena de gala y evento">
             </div>
-        </article>
 
-        <article class="servicio">
-            <img
-                src="https://centrodegraduaciones.com/wp-content/uploads/2020/10/web-Tour-expo-grad_Mesa-de-trabajo-1-copia-6-scaled.jpg"
-                alt="Pedestal conmemorativo">
+            <div class="event-body">
 
-            <div class="servicio-contenido">
-                <h3>Paquetes individuales</h3>
+                <span class="event-tag">Evento especial</span>
+
+                <h3>Gran Cena de Gala</h3>
 
                 <p>
-                    Conoce alternativas de productos conmemorativos
-                    para celebrar tu graduación de manera especial.
+                    Vive una noche llena de elegancia, gastronomía
+                    y momentos especiales. Una experiencia diseñada
+                    para disfrutar y celebrar en un ambiente exclusivo.
                 </p>
+
+                <div class="event-details">
+                    📅 Fecha: Próximamente<br>
+                    📍 Hotel Provincia Juriquilla<br>
+                    ✨ Cena, celebración y elegancia
+                </div>
+
+                <a
+                href="https://ticket.payuticket.com/event/gran-cena-de-gala-hmw59j?useEmbed=true"
+                target="_blank"
+                class="btn vivenu-btn yourStylingClass">
+                    COMPRAR ENTRADAS
+                </a>
+
             </div>
         </article>
 
     </div>
 </section>
 
-<!-- LLAMADA A LA ACCIÓN -->
-
+<!-- BANNER -->
 <section class="banner">
-    <h2>Tu graduación merece celebrarse</h2>
+    <h2>Momentos que merecen ser vividos</h2>
 
     <p>
-        Revisa las próximas graduaciones y encuentra la información
-        de tu generación en un solo lugar.
+        Descubre un espacio lleno de historia, elegancia y experiencias.
+        <br>
+        Te esperamos en Provincia Juriquilla.
     </p>
 
-    <a href="#graduaciones" class="btn">
-        CONSULTAR GRADUACIONES
+    <a href="#contacto" class="btn">
+        CONTÁCTANOS
     </a>
 </section>
 
 <!-- CONTACTO -->
+<section class="contact" id="contacto">
 
-<section class="contacto" id="contacto">
-    <h2>Estamos para ayudarte</h2>
+    <div class="section-heading">
+        <div class="eyebrow">Estamos para recibirte</div>
+        <h2>Contacto y ubicación</h2>
+    </div>
 
-    <p>
-        <strong>Tours Expo Graduación</strong>
-    </p>
-
-    <p>
-        8 Sur No. 2506, Col. Ladrillera de Benítez, Puebla, México.
-    </p>
+    <p><strong>Hotel Provincia Juriquilla</strong></p>
 
     <p>
-        Lunes a viernes: 9:00 a 15:00 h · Sábado: 9:00 a 14:00 h
+        Blvd. Villas del Mesón No. 56,
+        Juriquilla, Santiago de Querétaro, México.
     </p>
 
-    <p>
-        centrodegraduaciones@gmail.com
-    </p>
+    <p>Teléfono: 442 458 17 40</p>
+
+    <p>Hospedaje · Gastronomía · Eventos · Convenciones</p>
 
     <br>
 
-    <a
-        class="btn btn-azul"
-        href="https://centrodegraduaciones.com/toursexpo/"
-        target="_blank"
-        rel="noopener noreferrer">
-        VISITAR PÁGINA OFICIAL
+    <a href="https://www.hotelprovinciajuriquilla.com/"
+       target="_blank" class="btn">
+        VISITAR SITIO OFICIAL
     </a>
+
 </section>
 
-<!-- PIE DE PÁGINA -->
-
+<!-- FOOTER -->
 <footer>
-    <div class="footer-logo">TOURS <span>EXPO</span></div>
+    <div class="footer-logo">HOTEL PROVINCIA JURIQUILLA</div>
 
-    <p>Graduación · Recuerdos · Nuevas etapas</p>
+    <p>
+        Hospitalidad, historia y experiencias.
+    </p>
 
-    <p>Demo de sitio web para presentación de un sistema de boletaje.</p>
+    <p>
+        © 2026 Hotel Provincia Juriquilla.
+        Demo de sitio web para venta de entradas.
+    </p>
 </footer>
 
 </body>
