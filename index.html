@@ -4,759 +4,321 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hotel Provincia Juriquilla | Experiencias y Eventos</title>
+<title>Jungala Aqua Experience | Vive la aventura</title>
 
 <style>
 :root {
-    --vino: #75452f;
-    --dorado: #b99a64;
-    --crema: #f6f3ed;
-    --oscuro: #292620;
-    --gris: #77736d;
-    --blanco: #ffffff;
+    --verde: #174b3d;
+    --verde2: #28634e;
+    --dorado: #c5a66b;
+    --crema: #f5f5ed;
+    --texto: #35463c;
+    --blanco: #fff;
 }
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Georgia", "Times New Roman", serif;
-    color: var(--oscuro);
-    background: var(--blanco);
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* NAV */
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:Arial,sans-serif; color:var(--texto); }
+a { text-decoration:none; }
 
 header {
-    position: sticky;
-    top: 0;
-    z-index: 99;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 7%;
-    box-shadow: 0 2px 12px rgba(0,0,0,.07);
+    position:sticky; top:0; z-index:100;
+    background:white; padding:17px 7%;
+    display:flex; justify-content:space-between;
+    align-items:center; box-shadow:0 2px 12px #00000012;
 }
-
 .logo {
-    font-size: 23px;
-    letter-spacing: 2px;
-    color: var(--vino);
-    font-weight: bold;
+    font-size:29px; letter-spacing:5px;
+    color:var(--verde); font-weight:bold;
 }
-
 .logo small {
-    display: block;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 9px;
-    letter-spacing: 5px;
-    color: var(--dorado);
-    margin-top: 4px;
+    display:block; text-align:center; color:var(--dorado);
+    font-size:9px; letter-spacing:5px; margin-top:4px;
 }
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
+nav { display:flex; align-items:center; gap:25px; }
 nav a {
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    letter-spacing: 1px;
-    color: #51463d;
+    color:var(--verde); font-size:12px;
+    font-weight:bold; letter-spacing:1px;
 }
-
-nav a:hover {
-    color: var(--dorado);
-}
-
-.nav-btn {
-    background: var(--vino);
-    color: white;
-    padding: 12px 19px;
-}
-
-/* HERO */
-
-.hero {
-    height: 660px;
-    background:
-      linear-gradient(rgba(25,20,15,.38), rgba(25,20,15,.50)),
-      url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=90")
-      center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 30px;
-}
-
-.hero-content {
-    max-width: 850px;
-}
-
-.hero .subtitle {
-    letter-spacing: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    text-transform: uppercase;
-    color: #f2dfbd;
-    margin-bottom: 24px;
-}
-
-.hero h1 {
-    font-size: 65px;
-    font-weight: normal;
-    line-height: 1.15;
-    margin-bottom: 24px;
-}
-
-.hero p {
-    font-size: 19px;
-    line-height: 1.8;
-    margin-bottom: 32px;
-}
+nav a:hover { color:var(--dorado); }
 
 .btn {
-    display: inline-block;
-    background: var(--vino);
-    color: white;
-    padding: 15px 29px;
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    letter-spacing: 1.4px;
-    transition: .3s;
+    display:inline-block; background:var(--dorado);
+    color:white; padding:15px 27px;
+    font-size:12px; font-weight:bold;
+    letter-spacing:1.3px; transition:.3s;
+}
+.btn:hover { background:var(--verde); }
+.btn-green { background:var(--verde); }
+
+.hero {
+    min-height:680px; display:flex;
+    justify-content:center; align-items:center;
+    text-align:center; color:white; padding:40px 7%;
+    background:
+    linear-gradient(#082b2090,#082b205e),
+    url("https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=2000&q=90")
+    center/cover;
+}
+.hero-content { max-width:850px; }
+.hero span {
+    color:#e4d1a5; font-size:12px;
+    letter-spacing:5px; font-weight:bold;
+}
+.hero h1 {
+    font-family:Georgia,serif; font-size:65px;
+    font-weight:normal; line-height:1.15;
+    margin:25px 0;
+}
+.hero p {
+    font-size:17px; line-height:1.8;
+    max-width:680px; margin:0 auto 30px;
 }
 
-.btn:hover {
-    background: var(--dorado);
-    color: white;
+section { padding:85px 8%; }
+.heading { text-align:center; margin-bottom:45px; }
+.heading span {
+    color:var(--dorado); font-size:11px;
+    letter-spacing:3px; font-weight:bold;
+}
+.heading h2 {
+    color:var(--verde); font:normal 42px Georgia,serif;
+    margin:15px 0;
+}
+.heading p { color:#737c74; line-height:1.8; font-size:15px; }
+
+.intro { background:var(--crema); }
+.intro-grid {
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:55px; align-items:center;
+}
+.intro img { width:100%; height:450px; object-fit:cover; }
+.intro h2 {
+    color:var(--verde); font:normal 42px Georgia,serif;
+    line-height:1.25; margin:20px 0;
+}
+.intro p { color:#737c74; line-height:1.9; margin-bottom:20px; }
+
+.attractions-grid {
+    display:grid; grid-template-columns:repeat(3,1fr); gap:25px;
+}
+.attraction { background:white; }
+.attraction img {
+    width:100%; height:235px; object-fit:cover;
+}
+.attraction div { padding:23px; }
+.attraction h3 {
+    font:normal 24px Georgia,serif;
+    color:var(--verde); margin-bottom:12px;
+}
+.attraction p { color:#737c74; font-size:14px; line-height:1.8; }
+
+.booking {
+    text-align:center; color:white;
+    background:var(--verde);
+}
+.booking h2 {
+    font:normal 42px Georgia,serif; margin-bottom:18px;
+}
+.booking p {
+    color:#dce6df; line-height:1.8;
+    margin-bottom:28px;
 }
 
-.btn-outline {
-    border: 1px solid white;
-    background: transparent;
+.experience-grid {
+    display:grid; grid-template-columns:repeat(3,1fr); gap:25px;
 }
-
-/* GENERAL */
-
-section {
-    padding: 90px 8%;
+.experience {
+    padding:30px; text-align:center;
+    border:1px solid #e6e5dd;
 }
-
-.section-heading {
-    text-align: center;
-    margin-bottom: 48px;
+.experience h3 {
+    color:var(--verde); font:normal 23px Georgia,serif;
+    margin:15px 0;
 }
-
-.section-heading .eyebrow {
-    color: var(--dorado);
-    text-transform: uppercase;
-    font-family: Arial, sans-serif;
-    font-size: 11px;
-    letter-spacing: 3px;
-}
-
-.section-heading h2 {
-    color: var(--vino);
-    font-size: 40px;
-    font-weight: normal;
-    margin: 16px 0;
-}
-
-.section-heading p {
-    color: var(--gris);
-    font-size: 16px;
-    line-height: 1.8;
-}
-
-/* HOTEL */
-
-.about {
-    background: var(--crema);
-}
-
-.about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 60px;
-}
-
-.about-img {
-    height: 470px;
-    overflow: hidden;
-}
-
-.about-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.about-text .eyebrow {
-    color: var(--dorado);
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    letter-spacing: 3px;
-}
-
-.about-text h2 {
-    color: var(--vino);
-    font-size: 40px;
-    font-weight: normal;
-    margin: 20px 0;
-    line-height: 1.25;
-}
-
-.about-text p {
-    color: #68615a;
-    line-height: 1.9;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-/* SERVICIOS */
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.service {
-    text-align: center;
-}
-
-.service img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-.service h3 {
-    color: var(--vino);
-    font-size: 24px;
-    font-weight: normal;
-    margin: 22px 0 12px;
-}
-
-.service p {
-    color: var(--gris);
-    font-size: 15px;
-    line-height: 1.8;
-}
-
-/* EVENTOS */
-
-.events {
-    background: var(--crema);
-}
-
-.events-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 35px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.event-card {
-    background: white;
-    box-shadow: 0 5px 25px rgba(0,0,0,.06);
-    transition: .3s;
-}
-
-.event-card:hover {
-    transform: translateY(-5px);
-}
-
-.event-img {
-    position: relative;
-    overflow: hidden;
-}
-
-.event-img img {
-    width: 100%;
-    height: 340px;
-    object-fit: cover;
-    display: block;
-    transition: .4s;
-}
-
-.event-card:hover img {
-    transform: scale(1.03);
-}
-
-.event-body {
-    padding: 32px;
-}
-
-.event-tag {
-    font-family: Arial, sans-serif;
-    color: var(--dorado);
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.event-body h3 {
-    color: var(--vino);
-    font-size: 31px;
-    font-weight: normal;
-    margin: 16px 0;
-}
-
-.event-body p {
-    font-size: 15px;
-    color: var(--gris);
-    line-height: 1.9;
-    margin-bottom: 24px;
-}
-
-.event-details {
-    border-top: 1px solid #e8e1d8;
-    border-bottom: 1px solid #e8e1d8;
-    padding: 15px 0;
-    margin-bottom: 25px;
-    color: #554c43;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    line-height: 2;
-}
-
-.event-body .btn {
-    text-align: center;
-    width: 100%;
-}
-
-/* BANNER */
+.experience p { color:#737c74; font-size:14px; line-height:1.8; }
+.symbol { font-size:35px; color:var(--dorado); }
 
 .banner {
+    text-align:center; color:white; padding:100px 20px;
     background:
-      linear-gradient(rgba(57,39,26,.78), rgba(57,39,26,.78)),
-      url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1800&q=85")
-      center/cover;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
+    linear-gradient(#153d2eb8,#153d2eb8),
+    url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
 }
+.banner h2 { font:normal 42px Georgia,serif; margin-bottom:20px; }
+.banner p { line-height:1.8; margin-bottom:25px; }
 
-.banner h2 {
-    font-size: 43px;
-    font-weight: normal;
-    margin-bottom: 22px;
-}
-
-.banner p {
-    line-height: 1.9;
-    margin-bottom: 30px;
-    font-size: 17px;
-}
-
-.banner .btn {
-    background: transparent;
-    border: 1px solid white;
-}
-
-.banner .btn:hover {
-    background: white;
-    color: var(--vino);
-}
-
-/* CONTACTO */
-
-.contact {
-    text-align: center;
-    background: white;
-}
-
-.contact h2 {
-    font-size: 37px;
-    font-weight: normal;
-    color: var(--vino);
-    margin-bottom: 25px;
-}
-
-.contact p {
-    color: var(--gris);
-    line-height: 2;
-    font-size: 15px;
-}
-
-/* FOOTER */
+.contact { text-align:center; }
+.contact p { color:#737c74; line-height:2; font-size:14px; }
 
 footer {
-    background: #332a23;
-    color: white;
-    padding: 35px 7%;
-    text-align: center;
+    background:#12372d; color:white;
+    text-align:center; padding:35px 15px;
 }
+footer .logo { color:white; margin-bottom:12px; }
+footer p { color:#d3dfd7; font-size:12px; line-height:2; }
 
-.footer-logo {
-    font-size: 23px;
-    letter-spacing: 2px;
-    color: #e0c18b;
-    margin-bottom: 12px;
-}
-
-footer p {
-    font-family: Arial, sans-serif;
-    color: #ddd2c5;
-    font-size: 12px;
-    line-height: 2;
-}
-
-/* MOBILE */
-
-@media(max-width: 850px) {
-
-    header {
-        flex-direction: column;
-        gap: 17px;
-    }
-
-    nav {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-
-    .hero {
-        height: 530px;
-    }
-
-    .hero h1 {
-        font-size: 43px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .about-img {
-        height: 350px;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .events-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .event-img img {
-        height: 280px;
-    }
-
-    section {
-        padding: 65px 6%;
-    }
-
-    .section-heading h2,
-    .about-text h2 {
-        font-size: 32px;
-    }
-
-    .banner h2 {
-        font-size: 33px;
-    }
+@media(max-width:850px) {
+    header { flex-direction:column; gap:17px; }
+    nav { flex-wrap:wrap; justify-content:center; gap:14px; }
+    .hero { min-height:550px; }
+    .hero h1 { font-size:43px; }
+    .intro-grid { grid-template-columns:1fr; }
+    .intro img { height:320px; }
+    .attractions-grid,.experience-grid { grid-template-columns:1fr; }
+    .heading h2,.intro h2,.booking h2 { font-size:33px; }
+    section { padding:65px 6%; }
 }
 </style>
-<script type="text/javascript" src="https://vivenu.com/web/deliver/js/v1/embed.js"></script>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
     <a href="#inicio">
-        <div class="logo">
-            HOTEL PROVINCIA
-            <small>JURIQUILLA</small>
-        </div>
+        <div class="logo">JUNGALA<small>AQUA EXPERIENCE</small></div>
     </a>
-
     <nav>
         <a href="#inicio">INICIO</a>
-        <a href="#hotel">EL HOTEL</a>
-        <a href="#servicios">SERVICIOS</a>
-        <a href="#eventos">EVENTOS</a>
-        <a href="#contacto" class="nav-btn">CONTACTO</a>
+        <a href="#parque">EL PARQUE</a>
+        <a href="#atracciones">ATRACCIONES</a>
+        <a href="#experiencias">EXPERIENCIAS</a>
+        <a href="calendario.html" class="btn btn-green">COMPRAR BOLETOS</a>
     </nav>
 </header>
 
-<!-- PORTADA -->
 <section class="hero" id="inicio">
     <div class="hero-content">
-        <div class="subtitle">Hospitalidad · Historia · Experiencias</div>
-
-        <h1>Un lugar donde cada momento se vuelve especial</h1>
-
+        <span>JUNGALA AQUA EXPERIENCE</span>
+        <h1>La aventura tropical comienza aquí</h1>
         <p>
-            Descubre el encanto de una hacienda histórica,
-            disfruta de espacios extraordinarios y vive
-            experiencias inolvidables en Provincia Juriquilla.
+            Descubre un oasis de diversión, naturaleza y lujo.
+            Vive experiencias acuáticas extraordinarias
+            en el corazón de la Riviera Maya.
         </p>
+        <a href="https://tickets.payuticket.com/event/jungala-30hxr7" class="btn">COMPRAR BOLETOS</a>
+    </div>
+</section>
 
-        <a href="#eventos" class="btn btn-outline">
-            DESCUBRE NUESTROS EVENTOS
+<section class="intro" id="parque">
+    <div class="intro-grid">
+        <img
+        src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1100&q=85"
+        alt="Alberca tropical">
+
+        <div>
+            <span style="color:#c5a66b;letter-spacing:3px;font-size:12px;">
+                BIENVENIDO A JUNGALA
+            </span>
+            <h2>Un paraíso acuático en la Riviera Maya</h2>
+            <p>
+                Sumérgete en un mundo de diversión rodeado de
+                naturaleza tropical. Jungala Aqua Experience
+                combina emocionantes atracciones, espacios
+                de relajación y experiencias para toda la familia.
+            </p>
+            <p>
+                Disfruta de albercas, toboganes, ríos tranquilos,
+                gastronomía y exclusivas áreas privadas.
+            </p>
+            <a href="#atracciones" class="btn btn-green">DESCUBRIR EL PARQUE</a>
+        </div>
+    </div>
+</section>
+
+<section id="atracciones">
+    <div class="heading">
+        <span>DESCUBRE JUNGALA</span>
+        <h2>Atracciones para todos</h2>
+        <p>Emoción, diversión y descanso en un solo lugar.</p>
+    </div>
+
+    <div class="attractions-grid">
+        <div class="attraction">
+            <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=900&q=85" alt="Alberca">
+            <div>
+                <h3>Alberca de olas</h3>
+                <p>Disfruta la emoción de las olas y vive una experiencia refrescante para compartir.</p>
+            </div>
+        </div>
+
+        <div class="attraction">
+            <img src="https://images.unsplash.com/photo-1564429238817-393bd4286b2d?auto=format&fit=crop&w=900&q=85" alt="Toboganes acuáticos">
+            <div>
+                <h3>Toboganes</h3>
+                <p>Descubre recorridos llenos de velocidad, giros y diversión para los más aventureros.</p>
+            </div>
+        </div>
+
+        <div class="attraction">
+            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=900&q=85" alt="Río y alberca">
+            <div>
+                <h3>Río lento</h3>
+                <p>Déjate llevar por la tranquilidad y disfruta de un recorrido rodeado de naturaleza.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="booking">
+    <h2>Planea tu próxima aventura</h2>
+    <p>Elige la fecha de tu visita y prepárate para disfrutar Jungala.</p>
+    <a href="calendario.html" class="btn">CONSULTAR CALENDARIO Y COMPRAR</a>
+</section>
+
+<section id="experiencias">
+    <div class="heading">
+        <span>MUCHO MÁS QUE UN PARQUE ACUÁTICO</span>
+        <h2>Experiencias extraordinarias</h2>
+        <p>Encuentra tu forma favorita de disfrutar el paraíso.</p>
+    </div>
+
+    <div class="experience-grid">
+        <div class="experience">
+            <div class="symbol">✧</div>
+            <h3>Zona infantil</h3>
+            <p>Espacios acuáticos diseñados para que los más pequeños disfruten y jueguen.</p>
+        </div>
+        <div class="experience">
+            <div class="symbol">◇</div>
+            <h3>Cabañas privadas</h3>
+            <p>Disfruta de comodidad, privacidad y atención personalizada.</p>
+        </div>
+        <div class="experience">
+            <div class="symbol">☼</div>
+            <h3>Gastronomía</h3>
+            <p>Complementa tu día con deliciosas opciones de alimentos y bebidas.</p>
+        </div>
+    </div>
+</section>
+
+<section class="banner">
+    <h2>Tu día extraordinario te espera</h2>
+    <p>Vive la aventura, disfruta el agua y crea recuerdos inolvidables.</p>
+    <a href="calendario.html" class="btn">COMPRA TUS BOLETOS</a>
+</section>
+
+<section class="contact" id="contacto">
+    <div class="heading">
+        <span>VISÍTANOS</span>
+        <h2>Jungala Aqua Experience</h2>
+        <p>
+            Km. 48 Carretera Cancún – Playa del Carmen,<br>
+            Riviera Maya, Quintana Roo, México.
+        </p>
+        <p>Atención a clientes: 800 509 7119</p>
+        <p>Consulta información y detalles en el sitio oficial.</p>
+        <br>
+        <a href="https://tickets.jungala.com/es" target="_blank" class="btn btn-green">
+            SITIO OFICIAL
         </a>
     </div>
 </section>
 
-<!-- HOTEL -->
-<section class="about" id="hotel">
-    <div class="about-content">
-
-        <div class="about-img">
-            <img
-            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
-            alt="Hotel de arquitectura tradicional">
-        </div>
-
-        <div class="about-text">
-            <div class="eyebrow">Nuestra historia</div>
-
-            <h2>El encanto de una hacienda, la comodidad de una gran experiencia</h2>
-
-            <p>
-                En Hotel Provincia Juriquilla, la arquitectura histórica
-                y la hospitalidad se unen para ofrecer un ambiente
-                único. Un espacio donde la tranquilidad, la elegancia
-                y la atención se convierten en parte de cada visita.
-            </p>
-
-            <p>
-                Ideal para disfrutar de una estancia, una reunión,
-                una celebración o un evento que merece un escenario especial.
-            </p>
-
-            <a href="#servicios" class="btn">CONOCE NUESTROS SERVICIOS</a>
-        </div>
-
-    </div>
-</section>
-
-<!-- SERVICIOS -->
-<section id="servicios">
-
-    <div class="section-heading">
-        <div class="eyebrow">Disfruta cada espacio</div>
-        <h2>Una experiencia completa</h2>
-        <p>
-            Descubre nuestros espacios y disfruta de todo
-            lo que tenemos preparado para ti.
-        </p>
-    </div>
-
-    <div class="services-grid">
-
-        <div class="service">
-            <img
-            src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=85"
-            alt="Habitación de hotel">
-            <h3>Habitaciones</h3>
-            <p>
-                Descansa en espacios diseñados para brindarte
-                comodidad, tranquilidad y una estancia placentera.
-            </p>
-        </div>
-
-        <div class="service">
-            <img
-            src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=900&q=85"
-            alt="Alberca del hotel">
-            <h3>Alberca y jardines</h3>
-            <p>
-                Relájate en nuestras áreas exteriores,
-                disfruta del sol y conecta con un ambiente de descanso.
-            </p>
-        </div>
-
-        <div class="service">
-            <img
-            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=85"
-            alt="Restaurante elegante">
-            <h3>Gastronomía</h3>
-            <p>
-                Disfruta de momentos únicos y sabores especiales
-                en nuestros espacios gastronómicos.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-<!-- EVENTOS -->
-<section class="events" id="eventos">
-
-    <div class="section-heading">
-        <div class="eyebrow">Experiencias Provincia</div>
-        <h2>Próximos eventos</h2>
-        <p>
-            Disfruta de experiencias únicas en un escenario extraordinario.
-            Reserva tus entradas y sé parte de nuestros próximos eventos.
-        </p>
-    </div>
-
-    <div class="events-grid">
-
-        <!-- EVENTO 1 -->
-        <article class="event-card">
-
-            <div class="event-img">
-                <img
-                src="vino.jpg"
-                alt="Concierto y música en vivo">
-            </div>
-
-            <div class="event-body">
-
-                <span class="event-tag">Evento especial</span>
-
-                <h3>Noche de Jazz &amp; Vino</h3>
-
-                <p>
-                    Una velada para disfrutar de música en vivo,
-                    un ambiente sofisticado y una experiencia
-                    inolvidable entre amigos y buena compañía.
-                </p>
-
-                <div class="event-details">
-                    📅 Fecha: Próximamente<br>
-                    📍 Hotel Provincia Juriquilla<br>
-                    ✨ Música, ambiente y experiencias
-                </div>
-
-                <a
-                href="https://ticket.payuticket.com/event/noche-de-jazz-vino-pz8jq7?useEmbed=true"
-                target="_blank"
-                class="btn vivenu-btn yourStylingClass">
-                    COMPRAR ENTRADAS
-                </a>
-
-            </div>
-        </article>
-
-        <!-- EVENTO 2 -->
-        <article class="event-card">
-
-            <div class="event-img">
-                <img
-                src="gala.jpeg"
-                alt="Cena de gala y evento">
-            </div>
-
-            <div class="event-body">
-
-                <span class="event-tag">Evento especial</span>
-
-                <h3>Gran Cena de Gala</h3>
-
-                <p>
-                    Vive una noche llena de elegancia, gastronomía
-                    y momentos especiales. Una experiencia diseñada
-                    para disfrutar y celebrar en un ambiente exclusivo.
-                </p>
-
-                <div class="event-details">
-                    📅 Fecha: Próximamente<br>
-                    📍 Hotel Provincia Juriquilla<br>
-                    ✨ Cena, celebración y elegancia
-                </div>
-
-                <a
-                href="https://ticket.payuticket.com/event/gran-cena-de-gala-hmw59j?useEmbed=true"
-                target="_blank"
-                class="btn vivenu-btn yourStylingClass">
-                    COMPRAR ENTRADAS
-                </a>
-
-            </div>
-        </article>
-
-    </div>
-</section>
-
-<!-- BANNER -->
-<section class="banner">
-    <h2>Momentos que merecen ser vividos</h2>
-
-    <p>
-        Descubre un espacio lleno de historia, elegancia y experiencias.
-        <br>
-        Te esperamos en Provincia Juriquilla.
-    </p>
-
-    <a href="#contacto" class="btn">
-        CONTÁCTANOS
-    </a>
-</section>
-
-<!-- CONTACTO -->
-<section class="contact" id="contacto">
-
-    <div class="section-heading">
-        <div class="eyebrow">Estamos para recibirte</div>
-        <h2>Contacto y ubicación</h2>
-    </div>
-
-    <p><strong>Hotel Provincia Juriquilla</strong></p>
-
-    <p>
-        Blvd. Villas del Mesón No. 56,
-        Juriquilla, Santiago de Querétaro, México.
-    </p>
-
-    <p>Teléfono: 442 458 17 40</p>
-
-    <p>Hospedaje · Gastronomía · Eventos · Convenciones</p>
-
-    <br>
-
-    <a href="https://www.hotelprovinciajuriquilla.com/"
-       target="_blank" class="btn">
-        VISITAR SITIO OFICIAL
-    </a>
-
-</section>
-
-<!-- FOOTER -->
 <footer>
-    <div class="footer-logo">HOTEL PROVINCIA JURIQUILLA</div>
-
-    <p>
-        Hospitalidad, historia y experiencias.
-    </p>
-
-    <p>
-        © 2026 Hotel Provincia Juriquilla.
-        Demo de sitio web para venta de entradas.
-    </p>
+    <div class="logo">JUNGALA</div>
+    <p>AQUA EXPERIENCE</p>
+    <p>© 2026 Demo de sitio web. Proyecto ilustrativo no oficial.</p>
 </footer>
 
 </body>
