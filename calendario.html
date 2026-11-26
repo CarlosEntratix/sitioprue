@@ -1,107 +1,457 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calendario | Hologram Zoo CDMX</title>
+<title>Calendario Diciembre 2026 | Jungala</title>
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;background:#050b0e;color:#fff}
-:root{--verde:#19c37d;--verde2:#6fffc0;--panel:#0c171c;--card:#111f25}
-header{position:sticky;top:0;z-index:10;background:rgba(5,11,14,.97);border-bottom:1px solid rgba(255,255,255,.1)}
-.navbar{max-width:1200px;margin:auto;min-height:80px;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{color:#fff;text-decoration:none;font-size:25px;font-weight:900}.logo span{color:var(--verde)}.logo small{display:block;color:#9fb0b7;font-size:10px;letter-spacing:3px;margin-top:5px}
-.menu{display:flex;align-items:center;gap:20px}.menu a{color:#fff;text-decoration:none;font-size:13px;font-weight:bold}.menu a:hover{color:var(--verde)}
-.inicio{padding:10px 17px;border:1px solid rgba(255,255,255,.35);border-radius:25px}.comprar{background:var(--verde);color:#03100b!important;padding:12px 20px;border-radius:25px}
-.hero{padding:85px 20px 60px;text-align:center;background:linear-gradient(rgba(0,15,20,.88),rgba(5,11,14,.98)),url('https://hologramzoocdmx.com/_astro/el_viaje_total_rajyxh_1QMKMI.webp') center/cover no-repeat}.hero h1{font-size:clamp(42px,6vw,68px);font-weight:900;text-transform:uppercase;margin-bottom:15px}.hero h1 span{color:var(--verde)}.hero p{max-width:700px;margin:auto;color:#b9c8cd;font-size:17px;line-height:1.7}
-section{padding:65px 20px}.container{max-width:1150px;margin:auto}.calendar-box{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:30px;box-shadow:0 15px 45px rgba(0,0,0,.35)}
-.calendar-title{text-align:center;margin-bottom:30px}.calendar-title h2{font-size:32px}.calendar-title h2 span{color:var(--verde)}.calendar-title p{color:#91a0a5;margin-top:8px}
-.weekdays,.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}.weekdays{margin-bottom:10px}.weekdays div{text-align:center;color:var(--verde2);font-weight:900;font-size:12px;padding:8px}
-.day{min-height:145px;background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:12px}.day:hover{border-color:rgba(25,195,125,.5);transform:translateY(-2px)}.empty{background:transparent;border:0}.number{font-size:17px;font-weight:900;margin-bottom:12px}.none{color:#526067;font-size:11px;margin-top:25px}
-.event{background:rgba(25,195,125,.1);border-left:3px solid var(--verde);border-radius:5px;padding:10px}.event h3{font-size:13px;margin-bottom:7px}.event p{font-size:11px;color:#aebdc3;line-height:1.4;margin-bottom:10px}.buy{display:block;background:var(--verde);color:#03100b;text-decoration:none;text-align:center;padding:9px 5px;border-radius:5px;font-size:11px;font-weight:900}.buy:hover{background:#fff}
-.legend{display:flex;justify-content:center;gap:22px;margin-top:25px;color:#9eabb0;font-size:12px}.legend span{display:flex;align-items:center;gap:7px}.dot{width:12px;height:12px;border-radius:3px;background:var(--verde)}.dot.gray{background:#303b40}
-.info{padding-top:0}.info-box{max-width:850px;margin:auto;background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:15px;padding:40px 25px;text-align:center}.info-box h2{font-size:28px;margin-bottom:12px}.info-box h2 span{color:var(--verde)}.info-box p{color:#aebdc3;line-height:1.7;margin-bottom:22px}.back{display:inline-block;background:#fff;color:#071419;text-decoration:none;padding:12px 22px;border-radius:25px;font-weight:900}.back:hover{background:var(--verde)}
-footer{background:#03080b;padding:40px 20px 20px}.footer{max-width:1150px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}.footer h3{color:var(--verde);margin-bottom:12px}.footer p{color:#8e9ba0;font-size:14px;line-height:1.7}.footer a{color:#cbd5d9;text-decoration:none}.copy{text-align:center;border-top:1px solid rgba(255,255,255,.1);max-width:1150px;margin:25px auto 0;padding-top:17px;color:#657277;font-size:12px}
-@media(max-width:850px){.menu a:not(.inicio):not(.comprar){display:none}.calendar-box{overflow-x:auto}.calendar,.weekdays{min-width:780px}.footer{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.navbar{flex-direction:column}.menu{flex-wrap:wrap;justify-content:center}.hero{padding:60px 15px 45px}.hero h1{font-size:40px}.hero p{font-size:15px}.calendar-box{padding:15px}.footer{grid-template-columns:1fr}}
+:root {
+    --verde: #174b3d;
+    --verde2: #28634e;
+    --dorado: #c5a66b;
+    --crema: #f5f5ed;
+    --gris: #737c74;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family:Arial,sans-serif;
+    color:#35463c;
+    background:var(--crema);
+}
+
+a { text-decoration:none; }
+
+header {
+    background:white;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 12px #00000012;
+}
+
+.logo {
+    color:var(--verde);
+    font-size:27px;
+    letter-spacing:5px;
+    font-weight:bold;
+}
+
+.logo small {
+    display:block;
+    text-align:center;
+    color:var(--dorado);
+    font-size:9px;
+    letter-spacing:4px;
+    margin-top:4px;
+}
+
+header a.back {
+    color:var(--verde);
+    font-size:13px;
+    font-weight:bold;
+}
+
+.hero {
+    background:
+    linear-gradient(#123c2eb8,#123c2e9c),
+    url("https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+    padding:65px 20px;
+    text-align:center;
+    color:white;
+}
+
+.hero span {
+    color:#e3d1a7;
+    letter-spacing:4px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.hero h1 {
+    font:normal 48px Georgia,serif;
+    margin:16px 0;
+}
+
+.hero p {
+    font-size:14px;
+    line-height:1.8;
+}
+
+.container {
+    max-width:1100px;
+    margin:55px auto;
+    padding:0 20px;
+}
+
+.calendar-box {
+    background:white;
+    padding:35px;
+    box-shadow:0 8px 30px #0000000c;
+}
+
+.month-title {
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.month-title h2 {
+    font:normal 34px Georgia,serif;
+    color:var(--verde);
+}
+
+.month-title p {
+    color:var(--gris);
+    font-size:13px;
+    margin-top:10px;
+    line-height:1.7;
+}
+
+.weekdays, .calendar-grid {
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+}
+
+.weekdays div {
+    text-align:center;
+    padding:14px 5px;
+    background:var(--verde);
+    color:white;
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.day {
+    min-height:150px;
+    border:1px solid #e9e9e2;
+    padding:12px 9px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    gap:10px;
+    background:white;
+}
+
+.day.empty { background:#f8f8f5; }
+.day.closed { background:#faf8f1; }
+
+.day-number {
+    color:var(--verde);
+    font-size:20px;
+    font-weight:bold;
+}
+
+.day-note {
+    color:#a17e42;
+    font-size:10px;
+    line-height:1.4;
+}
+
+/* Botones de compra compatibles con Vivenu */
+.day .vivenu-btn {
+    display:block;
+    width:100%;
+    border:0;
+    cursor:pointer;
+    background:var(--verde);
+    color:white;
+    padding:10px 4px;
+    font-size:10px;
+    font-weight:bold;
+    letter-spacing:.4px;
+    text-align:center;
+    transition:.2s;
+}
+
+.day .vivenu-btn:hover {
+    background:var(--dorado);
+}
+
+.day .vivenu-btn.missing {
+    background:#a18c68;
+}
+
+.legend {
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin-top:25px;
+    font-size:12px;
+    color:var(--gris);
+}
+
+.legend span {
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
+
+.dot {
+    width:10px;
+    height:10px;
+    display:inline-block;
+    border-radius:50%;
+}
+
+.dot.green { background:var(--verde); }
+.dot.gold { background:var(--dorado); }
+
+.notice {
+    margin-top:25px;
+    background:#f7f4e9;
+    padding:18px;
+    color:#716548;
+    font-size:12px;
+    line-height:1.8;
+}
+
+.back-home {
+    text-align:center;
+    margin:35px 0;
+}
+
+.back-home a {
+    display:inline-block;
+    background:var(--dorado);
+    color:white;
+    padding:14px 25px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+footer {
+    background:#12372d;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+footer p {
+    color:#d3dfd7;
+    font-size:12px;
+    line-height:2;
+}
+
+@media(max-width:750px) {
+    header {
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero h1 { font-size:36px; }
+
+    .calendar-box { padding:12px; }
+
+    .weekdays div {
+        font-size:9px;
+        padding:12px 1px;
+    }
+
+    .day {
+        min-height:112px;
+        padding:7px 3px;
+        gap:5px;
+    }
+
+    .day-number { font-size:16px; }
+
+    .day .vivenu-btn {
+        font-size:8px;
+        padding:8px 2px;
+    }
+
+    .day-note { font-size:8px; }
+
+    .month-title h2 { font-size:28px; }
+}
 </style>
-<script type="text/javascript" src="https://vivenu.dev/web/deliver/js/v1/embed.js"></script>
+
+<!-- Integración de Vivenu -->
+<script type="text/javascript"
+src="https://vivenu.dev/web/deliver/js/v1/embed.js"></script>
+
 </head>
+
 <body>
+
 <header>
-<nav class="navbar">
-<a href="index.html" class="logo">HOLOGRAM<span>ZOO</span><small>CIUDAD DE MÉXICO</small></a>
-<div class="menu">
-<a href="index.html" class="inicio">← INICIO</a>
-<a href="index.html#experiencia">LA EXPERIENCIA</a>
-<a href="index.html#atracciones">EXPERIENCIAS</a>
-<a href="calendario.html">CALENDARIO</a>
-<a href="#fechas" class="comprar">🎟️ COMPRAR BOLETOS</a>
-</div>
-</nav>
+    <a href="index.html">
+        <div class="logo">
+            JUNGALA
+            <small>AQUA EXPERIENCE</small>
+        </div>
+    </a>
+
+    <a href="index.html" class="back">
+        ← VOLVER AL INICIO
+    </a>
 </header>
 
-<div class="hero">
-<h1>Próximas <span>visitas</span></h1>
-<p>Selecciona una fecha disponible para consultar la experiencia y comprar tus boletos para Hologram Zoo CDMX.</p>
-</div>
+<section class="hero">
+    <span>PLANEA TU VISITA</span>
+    <h1>Calendario de visitas</h1>
+    <p>Selecciona el día de tu preferencia y adquiere tus boletos.</p>
+</section>
 
-<section id="fechas">
 <div class="container">
-<div class="calendar-box">
-<div class="calendar-title"><h2>Septiembre <span>2026</span></h2><p>Selecciona una fecha disponible para comprar tus boletos.</p></div>
-<div class="weekdays"><div>LUN</div><div>MAR</div><div>MIÉ</div><div>JUE</div><div>VIE</div><div>SÁB</div><div>DOM</div></div>
-<div class="calendar">
-<div class="day empty"></div>
-<div class="day"><div class="number">1</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">2</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">3</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">4</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">5</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">6</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">7</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">8</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">9</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">10</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">11</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">12</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">13</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">14</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">15</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">16</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">17</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">18</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">19</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">20</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">21</div><div class="event"><h3>🦁 Hologram Zoo</h3><p>Experiencia completa</p><a class="buy vivenu-btn yourStylingClass" href="https://tickets.payuticket.com/checkout/hologram-zoo-y5x2gr?useEmbed=true" target="_blank">🎟️ COMPRAR</a></div></div>
-<div class="day"><div class="number">22</div><div class="event"><h3>🐧 Hologram Zoo</h3><p>Experiencia completa</p><a class="buy vivenu-btn yourStylingClass" href="https://tickets.payuticket.com/checkout/hologram-zoo-5u3yrr?useEmbed=true" target="_blank">🎟️ COMPRAR</a></div></div>
-<div class="day"><div class="number">23</div><div class="event"><h3>🦖 Hologram Zoo</h3><p>Experiencia completa</p><a class="buy vivenu-btn yourStylingClass" href="https://tickets.payuticket.com/checkout/hologram-zoo-g6wax4?useEmbed=true" target="_blank">🎟️ COMPRAR</a></div></div>
-<div class="day"><div class="number">24</div><div class="event"><h3>🌎 Hologram Zoo</h3><p>Experiencia completa</p><a class="buy vivenu-btn yourStylingClass" href="https://tickets.payuticket.com/checkout/hologram-zoo-rq3gxs?useEmbed=true" target="_blank">🎟️ COMPRAR</a></div></div>
-<div class="day"><div class="number">25</div><div class="event"><h3>🌎 Hologram Zoo</h3><p>Experiencia completa</p><a class="buy vivenu-btn yourStylingClass" href="https://tickets.payuticket.com/checkout/hologram-zoo-243j3e?useEmbed=true" target="_blank">🎟️ COMPRAR</a></div></div>
-<div class="day"><div class="number">26</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">27</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">28</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">29</div><div class="none">Sin evento</div></div>
-<div class="day"><div class="number">30</div><div class="none">Sin evento</div></div>
-</div>
-</div>
-</section>
 
-<section class="info">
-<div class="info-box">
-<h2>¿Listo para vivir <span>la experiencia?</span></h2>
-<p>Selecciona una fecha disponible y haz clic en comprar boletos. Cada fecha puede tener un enlace de compra diferente.</p>
-<a href="index.html" class="back">← REGRESAR AL INICIO</a>
+    <div class="calendar-box">
+
+        <div class="month-title">
+            <h2>Diciembre 2026</h2>
+            <p>Selecciona una fecha para consultar tu compra.</p>
+        </div>
+
+        <div class="weekdays">
+            <div>DOM</div>
+            <div>LUN</div>
+            <div>MAR</div>
+            <div>MIÉ</div>
+            <div>JUE</div>
+            <div>VIE</div>
+            <div>SÁB</div>
+        </div>
+
+        <div class="calendar-grid" id="calendar"></div>
+
+        <div class="legend">
+            <span><i class="dot green"></i> Comprar boletos</span>
+            <span><i class="dot gold"></i> Revisar operación del parque</span>
+        </div>
+
+        <div class="notice">
+            <strong>Importante:</strong> Los jueves aparecen señalados para
+            verificar su operación, ya que el horario habitual publicado
+            por el parque contempla cierre los jueves por mantenimiento.
+            Los días y horarios pueden variar. Confirma la disponibilidad
+            oficial antes de realizar tu compra.
+        </div>
+
+    </div>
+
+    <div class="back-home">
+        <a href="index.html">VOLVER A JUNGALA</a>
+    </div>
+
 </div>
-</section>
 
 <footer>
-<div class="footer">
-<div><h3>Hologram Zoo CDMX</h3><p>Una experiencia inmersiva donde lo imposible cobra vida.</p></div>
-<div><h3>Navegación</h3><p><a href="index.html">Inicio</a></p><p><a href="calendario.html">Calendario</a></p></div>
-<div><h3>Información</h3><p>📍 Ciudad de México</p><p>🎟️ Compra tus boletos en línea</p></div>
-</div>
-<div class="copy">Hologram Zoo CDMX © 2026 · Demo de sistema de boletaje</div>
+    <div class="logo" style="color:white;">JUNGALA</div>
+    <p>AQUA EXPERIENCE</p>
+    <p>© 2026 Demo de sitio web. Proyecto ilustrativo no oficial.</p>
 </footer>
+
+<script>
+
+/*
+  AGREGA AQUÍ LOS ENLACES DE VIVENU.
+  Cada fecha puede tener un enlace diferente.
+*/
+
+const enlacesCompra = {
+    "2026-12-01": "",
+    "2026-12-02": "",
+    "2026-12-03": "",
+    "2026-12-04": "",
+    "2026-12-05": "",
+    "2026-12-06": "",
+    "2026-12-07": "",
+    "2026-12-08": "",
+    "2026-12-09": "",
+    "2026-12-10": "",
+    "2026-12-11": "",
+    "2026-12-12": "",
+    "2026-12-13": "",
+    "2026-12-14": "",
+    "2026-12-15": "",
+    "2026-12-16": "",
+    "2026-12-17": "https://tickets.payuticket.com/checkout/jungala-pu85i6?useEmbed=true",
+    "2026-12-18": "https://tickets.payuticket.com/checkout/jungala-ek1axr?useEmbed=true",
+    "2026-12-19": "https://tickets.payuticket.com/checkout/jungala-geuarm?useEmbed=true",
+    "2026-12-20": "https://tickets.payuticket.com/checkout/jungala-40k8ob?useEmbed=true",
+    "2026-12-21": "https://tickets.payuticket.com/checkout/jungala-kp04jt?useEmbed=true",
+    "2026-12-22": "",
+    "2026-12-23": "",
+    "2026-12-24": "",
+    "2026-12-25": "",
+    "2026-12-26": "",
+    "2026-12-27": "",
+    "2026-12-28": "",
+    "2026-12-29": "",
+    "2026-12-30": "",
+    "2026-12-31": ""
+};
+
+const year = 2026;
+const month = 11;
+const totalDays = 31;
+
+const calendar = document.getElementById("calendar");
+
+const firstDay = new Date(year, month, 1).getDay();
+
+// Espacios vacíos antes del primer día
+for (let i = 0; i < firstDay; i++) {
+    const empty = document.createElement("div");
+    empty.className = "day empty";
+    calendar.appendChild(empty);
+}
+
+// Generar calendario
+for (let day = 1; day <= totalDays; day++) {
+
+    const fecha = `${year}-12-${String(day).padStart(2,"0")}`;
+    const fechaObjeto = new Date(year, month, day);
+    const jueves = fechaObjeto.getDay() === 4;
+
+    const link = enlacesCompra[fecha];
+
+    const card = document.createElement("div");
+    card.className = jueves ? "day closed" : "day";
+
+    const numero = document.createElement("div");
+    numero.className = "day-number";
+    numero.textContent = day;
+
+    const nota = document.createElement("div");
+    nota.className = "day-note";
+    nota.textContent = jueves
+        ? "Verificar operación"
+        : "Jungala Aqua Experience";
+
+    // Crear enlace con las clases requeridas por Vivenu
+    const boton = document.createElement("a");
+
+    boton.className = "vivenu-btn yourStylingClass";
+    boton.textContent = "COMPRAR BOLETOS";
+
+    if (link && link.trim() !== "") {
+        boton.href = link;
+    } else {
+        boton.href = "#";
+        boton.classList.add("missing");
+
+        boton.addEventListener("click", function(event) {
+            event.preventDefault();
+            alert("Agrega el enlace de Vivenu para el día " + fecha);
+        });
+    }
+
+    card.appendChild(numero);
+    card.appendChild(nota);
+    card.appendChild(boton);
+
+    calendar.appendChild(card);
+}
+
+</script>
+
 </body>
 </html>
